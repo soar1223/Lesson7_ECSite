@@ -23,7 +23,7 @@
                 <div class="flex flex-col space-y-6">
                     @foreach($cartItems as $cartItem)
                         <div class="flex items-center bg-gray-700 p-4 rounded-md shadow-md">
-                            <img src="{{ $cartItem['image'] }}" alt="{{ $cartItem['product']['name'] }}" class="w-32 h-32 object-cover mr-6">
+                            <img src="{{ asset('storage/' . $cartItem['product']['image']) }}" alt="{{ $cartItem['product']['name'] }}" class="w-32 h-32 object-cover mr-6">
                             <div class="flex-grow">
                                 <h3 class="text-xl font-semibold">{{ $cartItem['product']['name'] }}</h3>
                                 <p class="text-gray-400">価格: {{ number_format($cartItem['product']['price']) }}円</p>
