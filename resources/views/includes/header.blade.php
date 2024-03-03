@@ -1,7 +1,7 @@
 <!-- ヘッダー -->
 <header class="bg-gray-800 py-4">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold"><a href="{{ route('products.productList') }}" class="text-white hover:text-blue-300">ECサイト</a></h1>
+        <h1 class="text-2xl font-bold"><a href="{{ route('products.productList') }}" class="text-white hover:text-blue-300">NexGaming</a></h1>
         <nav>
             @auth
                 <!-- ログイン中の名前の文字色を緑に変更 -->

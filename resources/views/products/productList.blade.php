@@ -45,7 +45,7 @@
                         @foreach($category->products as $product)
                             <div class="bg-gray-700 p-6 rounded-md shadow-md">
                                 @if($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="mb-4 w-full h-32 object-cover">
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="mb-4 w-full h-48 object-fit">
                                 @else
                                     <div class="w-full h-32 bg-gray-900 text-white flex items-center justify-center">
                                         画像なし

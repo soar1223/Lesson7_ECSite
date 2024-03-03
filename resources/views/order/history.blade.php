@@ -25,7 +25,7 @@
                             @php $totalPrice += $itemTotal; @endphp
                             <li>{{ $item->product->name }} - {{ $item->quantity }}個 - {{ number_format($item->product->price) }}円 (小計: {{ number_format($itemTotal) }}円)</li>
                         @else
-                            <!-- 製品が存在しない場合の処理、必要に応じてコメントアウトを解除して使用 -->
+                            <!-- 製品が存在しない場合の処理 -->
                             <li>商品情報が利用できません</li>
                         @endif
                     @endforeach

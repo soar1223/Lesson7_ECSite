@@ -21,7 +21,7 @@
                 <!-- 商品画像 -->
                 <div>
                     @if($product->image)
-                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-64 object-cover">
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-64 object-contain">
                     @else
                         <div class="flex items-center justify-center w-full h-64 bg-gray-900 text-white text-lg">
                             画像なし
