@@ -178,6 +178,12 @@ class EcController extends Controller
             $user_id = Auth::id();
             $order = Order::create([
                 // オーダー作成の詳細
+                'user_id' => $user_id,
+                'order_number' => $user_id . time(), 
+                'status' => 'pending',
+                'shipping_address' => $request->address, // 住所
+                'shipping_zip' => $request->postal_code, // 郵便番号
+                'shipping_phone' => $request->phone, // 電話番号
             ]);
 
             $cartItems = Cart::with('product')->where('user_id', $user_id)->get();
@@ -193,7 +199,9 @@ class EcController extends Controller
                 }
 
                 $order->orderItems()->create([
-                    // オーダーアイテム作成の詳細
+                    'product_id' => $cartItem->product_id,
+                    'quantity' => $cartItem->quantity
+                    
                 ]);
 
                 $product->decrement('stock_quantity', $cartItem->quantity);
